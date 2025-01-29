@@ -1,42 +1,142 @@
-.main {
-    display: flex;
-    justify-content: center; 
-    align-items: center;    
-    flex-direction: column; 
-    margin-top: 20px;       
-    margin-bottom: 20px;    
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Jura", serif;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  min-height: 300px;
+}
+.navbar{
+  background-color: #808080;
+}
+
+.sobre-mim,
+.baixar-cv {
+  background-color: #D3D3D3;
+}
+
+.tecnologias {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 80px;
+  background-color: #F0F0F0;
+}
+
+.tecnologias .titulo {
+  flex: 1;
+  text-align: left;
+}
+
+.sobre-mim,
+.baixar-cv,
+.tecnologias {
+  gap: 30px;
+}
+
+
+.sobre-mim .foto-rosto {
+  order: 1;
+}
+
+.tecnologias .icones {
+  order: 1;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.baixar-cv .btn {
+  order: 1;
+}
+
+
+.foto-rosto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.texto,
+.titulo {
+  max-width: 500px;
+  text-align: left;
+}
+
+.texto p {
+  margin: 0;
+}
+
+.icones {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.tech-icons li {
+  display: flex;
+}
+
+.tech-icons img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .foto-rosto {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;     
-    object-fit: cover; 
-    margin-bottom: 20px;        
+
+  .foto-rosto,
+  .icones {
+    order: 0 !important;
   }
-  #resumo{
-    margin-bottom:50px;
+
+  .icones {
+    justify-content: center;
   }
-  .tech-icons {
-    list-style: none; 
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap; 
-    gap: 20px; 
-    padding: 0; 
-    margin: 20px 0; 
+
+  .texto,
+  .titulo {
+    max-width: 100%;
+    text-align: center;
   }
-  
-  .tech-icons li {
-    display: flex; 
-  }
-  
-  .tech-icons img {
-    width: 60px; 
-    height: auto; 
-    transition: transform 0.3s ease; 
-  }
-  
-  .tech-icons img:hover {
-    transform: scale(1.1); 
-  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+#butao{
+  margin-bottom: 15px;
+}
